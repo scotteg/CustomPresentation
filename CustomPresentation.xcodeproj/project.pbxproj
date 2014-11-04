@@ -17,6 +17,8 @@
 		0199933F197EEAE70097E0FD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199933E197EEAE70097E0FD /* Country.swift */; };
 		01999341197EEFF90097E0FD /* CountryData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01999340197EEFF90097E0FD /* CountryData.plist */; };
 		01999343197EF0EC0097E0FD /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01999342197EF0EC0097E0FD /* CollectionViewLayout.swift */; };
+		D29DCA331A08E57C00704FDC /* SelectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DCA321A08E57C00704FDC /* SelectionObject.swift */; };
+		D29DCA351A08E64B00704FDC /* AwesomePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DCA341A08E64B00704FDC /* AwesomePresentationController.swift */; };
 		D2AC69F41A06F3850008CDBB /* SimplePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC69F31A06F3850008CDBB /* SimplePresentationController.swift */; };
 		D2C5A5261A07958D00E8B69D /* SimpleTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5A5251A07958D00E8B69D /* SimpleTransitioner.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		0199933E197EEAE70097E0FD /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		01999340197EEFF90097E0FD /* CountryData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CountryData.plist; sourceTree = "<group>"; };
 		01999342197EF0EC0097E0FD /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
+		D29DCA321A08E57C00704FDC /* SelectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionObject.swift; sourceTree = "<group>"; };
+		D29DCA341A08E64B00704FDC /* AwesomePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomePresentationController.swift; sourceTree = "<group>"; };
 		D2AC69F31A06F3850008CDBB /* SimplePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePresentationController.swift; sourceTree = "<group>"; };
 		D2C5A5251A07958D00E8B69D /* SimpleTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTransitioner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AC69F31A06F3850008CDBB /* SimplePresentationController.swift */,
+				D29DCA341A08E64B00704FDC /* AwesomePresentationController.swift */,
 			);
 			name = PresentationControllers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				01999323197EE65D0097E0FD /* Main.storyboard */,
 				01999326197EE65D0097E0FD /* Images.xcassets */,
 				0199931D197EE65D0097E0FD /* Supporting Files */,
+				D29DCA321A08E57C00704FDC /* SelectionObject.swift */,
 			);
 			path = CustomPresentation;
 			sourceTree = "<group>";
@@ -247,11 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0199933F197EEAE70097E0FD /* Country.swift in Sources */,
+				D29DCA331A08E57C00704FDC /* SelectionObject.swift in Sources */,
 				01999322197EE65D0097E0FD /* CountriesViewController.swift in Sources */,
 				01999320197EE65D0097E0FD /* AppDelegate.swift in Sources */,
 				018B7D7719805C1D00C62AE7 /* OverlayViewController.swift in Sources */,
 				01999343197EF0EC0097E0FD /* CollectionViewLayout.swift in Sources */,
 				D2AC69F41A06F3850008CDBB /* SimplePresentationController.swift in Sources */,
+				D29DCA351A08E64B00704FDC /* AwesomePresentationController.swift in Sources */,
 				0199933D197EE7500097E0FD /* CollectionViewCell.swift in Sources */,
 				D2C5A5261A07958D00E8B69D /* SimpleTransitioner.swift in Sources */,
 			);
