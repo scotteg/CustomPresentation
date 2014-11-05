@@ -20,6 +20,7 @@
 		D29DCA331A08E57C00704FDC /* SelectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DCA321A08E57C00704FDC /* SelectionObject.swift */; };
 		D29DCA351A08E64B00704FDC /* AwesomePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DCA341A08E64B00704FDC /* AwesomePresentationController.swift */; };
 		D2AC69F41A06F3850008CDBB /* SimplePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC69F31A06F3850008CDBB /* SimplePresentationController.swift */; };
+		D2C07DEE1A0A3F2F008FC8BE /* AwesomeTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C07DED1A0A3F2F008FC8BE /* AwesomeTransitioner.swift */; };
 		D2C5A5261A07958D00E8B69D /* SimpleTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5A5251A07958D00E8B69D /* SimpleTransitioner.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		D29DCA321A08E57C00704FDC /* SelectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionObject.swift; sourceTree = "<group>"; };
 		D29DCA341A08E64B00704FDC /* AwesomePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomePresentationController.swift; sourceTree = "<group>"; };
 		D2AC69F31A06F3850008CDBB /* SimplePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePresentationController.swift; sourceTree = "<group>"; };
+		D2C07DED1A0A3F2F008FC8BE /* AwesomeTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeTransitioner.swift; sourceTree = "<group>"; };
 		D2C5A5251A07958D00E8B69D /* SimpleTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTransitioner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C5A5251A07958D00E8B69D /* SimpleTransitioner.swift */,
+				D2C07DED1A0A3F2F008FC8BE /* AwesomeTransitioner.swift */,
 			);
 			name = Transitioners;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				D29DCA351A08E64B00704FDC /* AwesomePresentationController.swift in Sources */,
 				0199933D197EE7500097E0FD /* CollectionViewCell.swift in Sources */,
 				D2C5A5261A07958D00E8B69D /* SimpleTransitioner.swift in Sources */,
+				D2C07DEE1A0A3F2F008FC8BE /* AwesomeTransitioner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
