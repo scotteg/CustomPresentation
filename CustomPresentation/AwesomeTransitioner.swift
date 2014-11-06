@@ -30,6 +30,11 @@ class AwesomeTransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
     return animationController
   }
   
+  func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    let animationController = AwesomeAnimatedTransitioning(isPresentation: false, selectedObject: selectedObject)
+    return animationController
+  }
+  
 }
 
 class AwesomeAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
@@ -50,6 +55,47 @@ class AwesomeAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransition
   }
   
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-    // TODO:
+    let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+    let fromView = fromViewController.view
+    let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+    let toView = toViewController.view
+    let containerView = transitionContext.containerView()
+    
+    if isPresentation {
+      containerView.addSubview(toView)
+    }
+    
+    let animatingViewController = isPresentation ? toViewController : fromViewController
+    let animatingView = animatingViewController.view
+    animatingView.frame = transitionContext.finalFrameForViewController(animatingViewController)
+    let appearedFrame = animatingView.frame
+    var dismissedFrame = appearedFrame
+    dismissedFrame.origin.y += CGRectGetHeight(dismissedFrame)
+    let initialFrame = isPresentation ? dismissedFrame : appearedFrame
+    let finalFrame = isPresentation ? appearedFrame : dismissedFrame
+    animatingView.frame = initialFrame
+    
+    var countriesViewController = (isPresentation ? fromViewController : toViewController) as CountriesViewController
+    if !isPresentation {
+      countriesViewController.hideImage(true, indexPath: selectedObject.selectedCellIndexPath)
+    }
+    
+    UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, options: .AllowUserInteraction | .BeginFromCurrentState, animations: { [unowned self] in
+      animatingView.frame = finalFrame
+      countriesViewController.changeCellSpacingForPresentation(self.isPresentation)
+      }, completion: { [unowned self] _ in
+        if !self.isPresentation {
+          countriesViewController.hideImage(false, indexPath: self.selectedObject.selectedCellIndexPath)
+          UIView.animateWithDuration(0.3, animations: {
+            fromView.alpha = 0.0
+            }, completion: { _ in
+              fromView.removeFromSuperview()
+              transitionContext.completeTransition(true)
+          })
+        } else {
+          transitionContext.completeTransition(true)
+        }
+    })
   }
+  
 }

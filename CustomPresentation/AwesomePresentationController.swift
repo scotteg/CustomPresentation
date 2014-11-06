@@ -82,19 +82,29 @@ class AwesomePresentationController: UIPresentationController, UIViewControllerT
     })
   }
   
+  func animateFlagWithBounceToPresentedPosition(presentedPosition: Bool) {
+    UIView.animateWithDuration(0.7, delay: 0.2, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: .CurveEaseOut, animations: { [unowned self] in
+      self.moveFlagToPresentedPosition(presentedPosition)
+      }, completion: { [unowned self] _ in
+        self.isAnimating = false
+    })
+  }
+  
   override func presentationTransitionWillBegin() {
     super.presentationTransitionWillBegin()
     isAnimating = true
     moveFlagToPresentedPosition(false)
     dimmingView.addSubview(flagImageView)
     containerView.addSubview(dimmingView)
-    animateFlagToPresentedPosition(true)
+//    animateFlagToPresentedPosition(true)
+    animateFlagWithBounceToPresentedPosition(true)
   }
   
   override func dismissalTransitionWillBegin() {
     super.dismissalTransitionWillBegin()
     isAnimating = true
-    animateFlagToPresentedPosition(false)
+//    animateFlagToPresentedPosition(false)
+    animateFlagWithBounceToPresentedPosition(false)
   }
   
 }

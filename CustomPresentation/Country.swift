@@ -32,6 +32,7 @@ class Country: NSObject {
   var quizQuestion: String = ""
   var correctAnswer: String = ""
   var quizAnswers: [String] = [];
+  var isHidden = false
   
   class func countries() ->NSArray {
     let plistFile =
