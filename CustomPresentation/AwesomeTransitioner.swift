@@ -83,8 +83,8 @@ class AwesomeAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransition
     UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, options: .AllowUserInteraction | .BeginFromCurrentState, animations: { [unowned self] in
       animatingView.frame = finalFrame
       countriesViewController.changeCellSpacingForPresentation(self.isPresentation)
-      }, completion: { [unowned self] _ in
-        if !self.isPresentation {
+      }, completion: { [isPresentation = self.isPresentation] _ in
+        if !isPresentation {
           countriesViewController.hideImage(false, indexPath: self.selectedObject.selectedCellIndexPath)
           UIView.animateWithDuration(0.3, animations: {
             fromView.alpha = 0.0

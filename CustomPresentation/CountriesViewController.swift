@@ -112,12 +112,13 @@ class CountriesViewController: UIViewController {
   }
   
   func changeCellSpacingForPresentation(presentation: Bool) {
-    let indexPaths = indexPathsForAllItems()
     if presentation {
+      let indexPaths = indexPathsForAllItems()
       countries = NSArray()
       collectionView.deleteItemsAtIndexPaths(indexPaths)
     } else {
       countries = Country.countries()
+      let indexPaths = indexPathsForAllItems()
       collectionView.insertItemsAtIndexPaths(indexPaths)
     }
   }
